@@ -6,11 +6,15 @@
 
 This lab adds multiprocessing to `mandel.c` using `fork()` and `wait()`. The `-p` option generates 50 Mandelbrot images and limits how many child processes run at once.
 
+## Implementation
+
+The program uses fork() to generate 50 Mandelbrot images. The -p option controls the number of simultaneous processes, while wait() manages their completion.
+
 ## Running
 
 ```bash
 make
-./mandel -p 5 -x -0.7435 -y 0.1314 -s 0.5
+./mandel -p 11 -x -0.7435 -y 0.1314 -s 0.5
 
 ```
 
@@ -33,3 +37,10 @@ ffplay mandel.mpg
 ## Runtime Results
 
 ![Runtime Graph](runtime.png)
+
+## Discussion
+
+Using more processes generally reduced runtime, but improvements became smaller as the number increased due to CPU limitations and overhead. Around ~14 processes performance didn't vary a lot. 
+
+
+
