@@ -1,6 +1,8 @@
 # CPE 2600 - Lab 11: Multiprocessing
 
 **Name:** Yousef Qamhia  
+**Course:** CPE 2600 - Systems Programming  
+**Section:** 111
 
 ## Description
 
